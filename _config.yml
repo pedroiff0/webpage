@@ -23,7 +23,7 @@ repository               : #
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpeg"
+  avatar           : "profilepic.jpeg"
   name             : "Pedro H. R. de Andrade"
   pronouns         : "He/Him"  
   bio              : "Astronomy Lover. Passionate about open source and science communication. Undergraduate Student from Federal Fluminense Institute, Rio de Janeiro - Brazil."
