@@ -38,8 +38,16 @@ jobs:
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
           ruby-version: '3.2' # must be >= 3.2 for activesupport 8.x
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: false # disable automatic bundler cache to control install path
           cache-version: 0 # Increment this number if you need to re-download cached gems
+
+      - name: Configure Bundler install path outside repo
+        run: |
+          # Install gems into runner temp directory so Jekyll won't try to process them
+          bundle config set --local path "$RUNNER_TEMP/vendor/bundle"
+
+      - name: Install gems
+        run: bundle install --jobs 4
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
