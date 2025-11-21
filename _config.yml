@@ -318,6 +318,8 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
+exclude:
+  - sitemap.xml
 
 # Archives
 #  Type
