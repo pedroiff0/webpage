@@ -26,22 +26,22 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
+/* Default light theme for the site aaa*/
 :root {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
+    --global-bg-color                   : transparent;
+    --global-footer-bg-color : rgba(219,202,255,0.02); /* subtle translucent for light theme, matches original */
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
+    --global-code-background-color      : transparent;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
     --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
+    --global-link-color-hover           : #5E2A7E; /* purple hover for links in light theme */
     --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
+    /* masthead custom colors removed for light theme; only hover remains purple */
+    --global-text-color                 : #000000; /* enforce black text in light theme */
+    --footer-blur                       : 4px;
+    --global-text-color-light           : #000000; /* footer and light secondary text fully black */
     --global-thead-color                : #{$lighter-gray};
 }

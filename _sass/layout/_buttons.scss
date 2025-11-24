@@ -17,13 +17,15 @@
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  background-color: var(--global-base-color);
+  /* use gradient when provided by theme, fallback to base color */
+  background: var(--global-btn-gradient, var(--global-base-color));
   border: 0 !important;
   border-radius: $border-radius;
   cursor: pointer;
 
   &:hover {
-    background-color: mix(white, #000, 20%);
+    /* subtle darken on hover while preserving gradient; respects custom-theme gradients */
+    filter: brightness(0.92);
   }
 
   .icon {

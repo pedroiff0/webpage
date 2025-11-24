@@ -3,14 +3,15 @@
    ========================================================================== */
 
 /* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
+$gray                       : #5299cf;
+$dark-gray                  : mix(#000, $gray, 20%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
+$background                 : #ae1717;
+$background-light           : mix(#fff, $background, 30%);
+$background-lighter         : mix(#fff, $background, 30%);
 $text                       : #ffffff;
 $link                       : #0ea1c5;
 $link-dark                  : mix(#000, $link, 25%);
@@ -36,9 +37,9 @@ $sidebar-screen-min-width   : 1024px;
 /* Dark theme for the site */
 html[data-theme="dark"] {
     --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
+    --global-bg-color                   : #0b0b0d; /* slightly lighter than pure black for better readability */
+    --global-footer-bg-color            : rgba(0,0,0,0.1); /* subtle translucent black so blur shows */
+        --global-border-color               : #000000; /* separators in dark theme should be black */
     --global-dark-border-color          : #{$background-light};
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
@@ -46,9 +47,14 @@ html[data-theme="dark"] {
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
+    /* Masthead (header/nav) colors - mirror light theme pattern but inverted */
+    --global-masthead-link-color        : #ffffff; /* links in masthead are white */
+    --global-masthead-link-color-hover  : #5E2A7E; /* use same purple hover for consistency */
+    --global-masthead-accent            : transparent; /* masthead/nav background transparent */
+    --global-text-color                 : #ffffff; /* enforce white text in dark theme */
+    --footer-blur                       : 4px;
+        --global-text-color-light           : #f3f3f3;
+        --masthead-blur                     : 8px; /* stronger blur for dark theme masthead */
+        --footer-blur                       : 8px; /* stronger blur for dark theme footer */
     --global-thead-color                : #{$background-lighter};
 }

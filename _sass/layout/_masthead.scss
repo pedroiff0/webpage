@@ -1,10 +1,17 @@
 /* ==========================================================================
    MASTHEAD
    ========================================================================== */
+// Ensure masthead and all children are transparent in dark theme
+html[data-theme="dark"] .masthead, html[data-theme="dark"] .masthead * {
+  background: transparent !important;
+  color: #fff !important;
+}
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: transparent !important;
+  backdrop-filter: blur(var(--masthead-blur, 6px));
+  -webkit-backdrop-filter: blur(var(--masthead-blur, 6px));
   height: fit-content;
   top: 0;
   width: 100%;
@@ -51,17 +58,5 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-  }
-}
-
-.masthead__menu-item {
-  background-color: var(--global-bg-color);
-  display: block;
-  list-style-type: none;
-  white-space: nowrap;
-
-  &--lg {
-    padding-right: 2em;
-    font-weight: 700;
   }
 }
