@@ -12,13 +12,16 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
+<div id="main" role="main" style="display: flex; min-height: 70vh; width: 100%; gap: 2rem;">
+  <aside class="sidebar-area" style="flex: 0 0 25%; max-width: 25%; min-width: 220px; background: none; height: 100vh; display: flex; align-items: stretch;">
+    <div style="width: 90%; height: 100%;">
+      {% include sidebar.html %}
+    </div>
+  </aside>
+  <section class="archive content-area" style="flex: 1 1 75%; max-width: 75%; padding: 2rem 2rem 2rem 0;">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
-  </div>
+  </section>
 </div>

@@ -9,9 +9,13 @@
 .sidebar {
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
-
   @include clearfix();
   margin-bottom: 1em;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   @media (orientation: portrait) {
     margin-top: 1em;
@@ -24,19 +28,12 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
-
     &:hover {
       opacity: 1;
     }
-  }
-
-  @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
-    padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
