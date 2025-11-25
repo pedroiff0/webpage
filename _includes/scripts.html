@@ -1,4 +1,16 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 <script src="{{ base_path }}/assets/js/dots-bg.js" defer></script>
 
+<!-- Ensure masthead overlays content: clear any body padding set at runtime so backdrop-filter can blur underlying content in Chrome -->
+<script>
+	(function(){
+		function clearBodyPadding(){
+			try{ document.body.style.paddingTop = ''; }catch(e){}
+		}
+		document.addEventListener('DOMContentLoaded', clearBodyPadding);
+		window.addEventListener('load', clearBodyPadding);
+		setTimeout(clearBodyPadding, 150);
+	})();
+</script>
+
 {% include analytics.html %}

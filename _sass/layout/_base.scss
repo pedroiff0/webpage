@@ -14,7 +14,7 @@ body {
   background-color: var(--global-bg-color);
 
   margin: 0;
-  padding: $masthead-height 0 0;
+  padding: 0; /* allow content to sit under fixed masthead so backdrop-filter can blur it */
   min-height: 100vh;
   display: flex;
   flex-direction: column;

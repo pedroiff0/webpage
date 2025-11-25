@@ -60,7 +60,9 @@ function updateNav() {
 
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
-  $('body').css('padding-top', mastheadHeight + 'px');
+  // Do not set body padding-top so the masthead can overlay page content.
+  // This allows `backdrop-filter` on the masthead::before to blur the underlying content
+  // in browsers like Chrome. Keep sidebar spacing logic intact where needed.
   if ($(".author__urls-wrapper button").is(":visible")) {
     $(".sidebar").css("padding-top", "");
   } else {

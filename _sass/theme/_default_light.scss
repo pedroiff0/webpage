@@ -28,10 +28,14 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site aaa*/
 :root {
-        --global-masthead-link-color        : #5E2A7E; /* masthead links purple in light theme */
-        --global-masthead-link-color-hover  : #5E2A7E; /* purple hover for masthead links */
+    --global-masthead-link-color        : #000000; /* masthead links black in light theme */
+    --global-masthead-link-color-hover  : #000000; /* masthead links black on hover in light theme */
     --global-base-color                 : #{$gray};
     --global-bg-color                   : transparent;
+    /* Ensure masthead uses same blur strength as dark theme; brighten overlay for Chrome */
+    --masthead-blur: 30px;
+    /* Increase overlay alpha so the frosted effect is visible on light backgrounds in Chrome */
+    --masthead-overlay: rgba(255,255,255,1);
     --global-footer-bg-color : rgba(219,202,255,0.02); /* subtle translucent for light theme, matches original */
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
