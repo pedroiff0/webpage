@@ -7,13 +7,13 @@ collection: publications
 category: manuscripts
 permalink: /publication/deAndrade2025
 author_profile: true
-date: 2024-12-16
+date: 2025-12-12
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2512.10037'
 bibtexurl: 'https://arxiv.org/bibtex/2512.10037'
 citation:
-  en: 'de Andrade P. H. R., Soja A. C., Dantas M. L. L., 2024, arXiv:2512.10037'
-  pt: 'DE ANDRADE, P. H. R.; SOJA, A. C.; DANTAS, M. L. L. Stellar properties and chemical features of the Gaia Catalogue of Nearby Stars observed by GALAH DR4. arXiv preprint, 2024. Disponível em: https://arxiv.org/abs/2512.10037. Acesso em: 12 dez. 2024.'
+  en: 'de Andrade P. H. R., Soja A. C., Dantas M. L. L., 2025, arXiv:2512.10037'
+  pt: 'DE ANDRADE, P. H. R.; SOJA, A. C.; DANTAS, M. L. L. Stellar properties and chemical features of the Gaia Catalogue of Nearby Stars observed by GALAH DR4. arXiv preprint, 2025. Disponível em: https://arxiv.org/abs/2512.10037.'
 ---
 
 <div class="lang-en" markdown="1">

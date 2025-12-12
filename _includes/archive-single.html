@@ -62,7 +62,7 @@
       <p>
         <span class="lang-en">Recommended citation:</span><span class="lang-pt">Citação recomendada:</span>
         {% if post.citation.en %}
-          <span class="lang-en">{{ post.citation.en }}</span><span class="lang-pt">{{ post.citation.pt }}</span>
+          <span class="lang-en">{{ post.citation.en }}</span><span class="lang-pt">{{ post.citation.pt }} Acesso em: {{ 'now' | date: '%d' }} {{ 'now' | date: '%B' | downcase | replace: 'january', 'jan.' | replace: 'february', 'fev.' | replace: 'march', 'mar.' | replace: 'april', 'abr.' | replace: 'may', 'maio' | replace: 'june', 'jun.' | replace: 'july', 'jul.' | replace: 'august', 'ago.' | replace: 'september', 'set.' | replace: 'october', 'out.' | replace: 'november', 'nov.' | replace: 'december', 'dez.' }} {{ 'now' | date: '%Y' }}.</span>
         {% else %}
           {{ post.citation }}
         {% endif %}
