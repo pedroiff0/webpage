@@ -93,11 +93,21 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   books:
-    title: ""
+    title:
+      en: ""
+      pt: ""
   manuscripts:
-    title: "Journal Articles"
+    title:
+      en: "Journal Articles"
+      pt: "Artigos em Periódicos"
   conferences:
-    title: "Conferences"
+    title:
+      en: "Conference Proceedings"
+      pt: "Anais de Conferências"
+  proceedings:
+    title:
+      en: "Other Proceedings"
+      pt: "Outros Anais"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
