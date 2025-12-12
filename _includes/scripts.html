@@ -43,3 +43,19 @@
 		} else { init(); }
 	})();
 </script>
+
+<script>
+	function updateTime(){
+		var el = document.getElementById('local-time');
+		if(el) {
+			var now = new Date();
+			var br = new Date(now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }));
+			var h = String(br.getHours()).padStart(2, '0');
+			var m = String(br.getMinutes()).padStart(2, '0');
+			el.innerHTML = h + ':' + m;
+		}
+	}
+	window.addEventListener('load', updateTime);
+	setInterval(updateTime, 60000);
+</script>
+
