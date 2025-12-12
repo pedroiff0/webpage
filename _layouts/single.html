@@ -14,10 +14,14 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+<div id="main" role="main" style="display: flex; min-height: 70vh; width: 100%;">
+  <aside class="sidebar-area" style="flex-basis: 25%; flex-shrink: 0; flex-grow: 0; min-width: 220px; max-width: 25%; background: none; height: 100vh; display: flex; align-items: stretch;">
+    <div style="width: 100%; height: 100%;">
+      {% include sidebar.html %}
+    </div>
+  </aside>
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork" style="flex-basis: 75%; flex-grow: 1; max-width: 75%; padding: 2rem 2rem 2rem 0; margin-left: 2rem;">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -26,7 +30,13 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.title %}
+            {% if page.title.en %}
+              <h1 class="page__title" itemprop="headline"><span class="lang-en">{{ page.title.en }}</span><span class="lang-pt">{{ page.title.pt }}</span></h1>
+            {% else %}
+              <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+            {% endif %}
+          {% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
@@ -93,17 +103,19 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      {% if site.data.ui-text[site.locale].related_label %}
-        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      {% endif %}
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
+  </article>
 </div>
+
+{% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+{% if page.id and page.related and site.related_posts.size > 0 %}
+  <div class="page__related" style="width: 100%; max-width: 1280px; margin: 2rem auto; padding: 0 2rem;">
+    {% if site.data.ui-text[site.locale].related_label %}
+      <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+    {% endif %}
+    <div class="grid__wrapper">
+      {% for post in site.related_posts limit:4 %}
+        {% include archive-single.html type="grid" %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

@@ -6,7 +6,11 @@
   {% assign teaser = site.teaser %}
 {% endif %}
 
-{% if post.id %}
+{% if post.title.en %}
+  {% assign title_en = post.title.en | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title_pt = post.title.pt | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% capture title %}<span class="lang-en">{{ title_en }}</span><span class="lang-pt">{{ title_pt }}</span>{% endcapture %}
+{% elsif post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
@@ -27,7 +31,9 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
+      {% if post.collection == 'publications' %}
+        {{ title }}
+      {% elsif post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>

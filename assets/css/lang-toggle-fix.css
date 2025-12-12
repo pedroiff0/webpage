@@ -1,9 +1,22 @@
 /* Language toggle visibility fix */
-.lang-en, .lang-pt { display: none !important; }
-html[lang="en"] .lang-en { display: inline !important; }
-html[lang="pt"] .lang-pt { display: inline !important; }
+/* Always render as inline for proper flow */
+.lang-en,
+.lang-pt {
+  display: inline !important;
+}
 
-html.pre-lang .lang-en,
-html.pre-lang .lang-pt {
-	display: none !important;
+/* English: show EN, hide PT */
+html[lang="en"] .lang-en {
+  display: inline !important;
+}
+html[lang="en"] .lang-pt {
+  display: none !important;
+}
+
+/* Portuguese: show PT, hide EN */
+html[lang="pt"] .lang-en {
+  display: none !important;
+}
+html[lang="pt"] .lang-pt {
+  display: inline !important;
 }
