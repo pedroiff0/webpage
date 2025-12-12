@@ -28,10 +28,10 @@ main:
       pt: "Publicações"
     url: /publications/
 
-  # - title:
-  #     en: "Blog"
-  #     pt: "Blog"
-  #   url: /blog/
+  - title:
+      en: "Blog"
+      pt: "Blog"
+    url: /blog/
 
   # - title:
   #     en: "CV"
