@@ -48,6 +48,7 @@ author:
   googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
+  lattes           : "http://lattes.cnpq.br/6818168089966785"
   orcid            : "https://orcid.org/0009-0003-6724-4640"
   semantic         : # URL
   pubmed           : # URL
@@ -92,11 +93,11 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   books:
-    title: #
+    title: ""
   manuscripts:
-    title: 'Journal Articles'    
+    title: "Journal Articles"
   conferences:
-    title: 'Conferences'
+    title: "Conferences"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -236,6 +237,15 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+  resources:
+    output: true
+    permalink: /:collection/:path/
+  media:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -293,6 +303,33 @@ defaults:
       layout: talk
       author_profile: true
       share: false
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+  # _resources
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+  # _media
+  - scope:
+      path: ""
+      type: media
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
 
 
 # Sass/SCSS
