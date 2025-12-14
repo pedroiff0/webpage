@@ -86,7 +86,7 @@ author_profile: true
 
 <ul class="research-list">
   <li>
-    <a href="/research/anomaly-detection/" class="research-link">
+    <a href="{{ site.baseurl }}/research/anomaly-detection/" class="research-link">
       <div class="research-icon">🔍</div>
       <div class="research-content">
         <h3><span class="lang-en">Anomaly Detection in Gaia Data</span><span class="lang-pt">Detecção de Anomalias em Dados do Gaia</span></h3>

@@ -86,7 +86,7 @@ author_profile: true
 
 <ul class="resources-list">
   <li>
-    <a href="/resources/astropy/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/astropy/" class="resource-link">
       <div class="resource-icon">📚</div>
       <div class="resource-content">
         <h3><span class="lang-en">Astropy</span><span class="lang-pt">Astropy</span></h3>
@@ -95,7 +95,7 @@ author_profile: true
     </a>
   </li>
   <li>
-    <a href="/resources/ds9/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/ds9/" class="resource-link">
       <div class="resource-icon">🔭</div>
       <div class="resource-content">
         <h3><span class="lang-en">DS9 - FITS Viewer</span><span class="lang-pt">DS9 - Visualizador FITS</span></h3>
@@ -104,7 +104,7 @@ author_profile: true
     </a>
   </li>
   <li>
-    <a href="/resources/topcat/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/topcat/" class="resource-link">
       <div class="resource-icon">📊</div>
       <div class="resource-content">
         <h3><span class="lang-en">TOPCAT</span><span class="lang-pt">TOPCAT</span></h3>
@@ -113,7 +113,7 @@ author_profile: true
     </a>
   </li>
   <li>
-    <a href="/resources/aladin/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/aladin/" class="resource-link">
       <div class="resource-icon">🌐</div>
       <div class="resource-content">
         <h3><span class="lang-en">Aladin Lite</span><span class="lang-pt">Aladin Lite</span></h3>
@@ -122,7 +122,7 @@ author_profile: true
     </a>
   </li>
   <li>
-    <a href="/resources/jupyter/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/jupyter/" class="resource-link">
       <div class="resource-icon">💻</div>
       <div class="resource-content">
         <h3><span class="lang-en">Jupyter Notebooks</span><span class="lang-pt">Jupyter Notebooks</span></h3>
