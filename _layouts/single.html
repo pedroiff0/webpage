@@ -81,6 +81,16 @@ layout: default
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.link %}
+          <div>
+            {% assign is_external = page.link | slice: 0, 4 %}
+            {% if is_external == 'http' %}
+              <a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a>
+            {% endif %}
+          </div>
+        {% endif %}
       </section>
 
       <footer class="page__meta">

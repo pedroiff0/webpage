@@ -17,8 +17,8 @@ name                     : &name "@pedroiff0"
 description              : &description "Pedro"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://pedroiff0.github.io # The base hostname & protocol for your site (no repo path)
                                                            # For a project site, set `baseurl` to the repo name (e.g. "/webpage").
-baseurl                  : "/webpage" # the subpath of your site, e.g. "/blog"
-repository               : # 
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "pedroiff0/webpage" # 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
