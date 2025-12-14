@@ -49,10 +49,8 @@
 		var el = document.getElementById('local-time');
 		if(el) {
 			var now = new Date();
-			var br = new Date(now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }));
-			var h = String(br.getHours()).padStart(2, '0');
-			var m = String(br.getMinutes()).padStart(2, '0');
-			el.innerHTML = h + ':' + m;
+			var time = now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false });
+			el.textContent = time;
 		}
 	}
 	window.addEventListener('load', updateTime);
