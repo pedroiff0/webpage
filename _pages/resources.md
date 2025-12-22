@@ -9,18 +9,6 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="lang-en" markdown="1">
-
-## Favorite Tools and References
-
-</div>
-
-<div class="lang-pt" markdown="1">
-
-## Ferramentas e Referências
-
-</div>
-
 <style>
 .resources-list {
   list-style: none;
@@ -95,3 +83,16 @@ author_profile: true
     </a>
   </li>
 </ul>
+
+<div class="lang-en" markdown="1">
+
+You cand find here my spotify: https://open.spotify.com/user/x3b9qut519tsznvxnbitnwm1x?si=b8c22fc2f62843e4
+
+
+</div>
+
+<div class="lang-pt" markdown="1">
+
+Meu spotify: https://open.spotify.com/user/x3b9qut519tsznvxnbitnwm1x?si=b8c22fc2f62843e4
+
+</div>
