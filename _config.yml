@@ -44,8 +44,8 @@ author:
 
   # Academic websites
   academia         : # URL
-  arxiv            : # URL
-  googlescholar    : # URL
+  arxiv            : https://arxiv.org/a/rochadeandrade_p_1.html
+  googlescholar    : https://scholar.google.com/citations?hl=pt-BR&user=qG9tHGEAAAAJ
   inspire-hep      : # URL
   impactstory      : # URL
   lattes           : "http://lattes.cnpq.br/6818168089966785"
