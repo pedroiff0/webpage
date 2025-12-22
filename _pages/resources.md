@@ -89,44 +89,8 @@ author_profile: true
     <a href="{{ site.baseurl }}/resources/astropy/" class="resource-link">
       <div class="resource-icon">📚</div>
       <div class="resource-content">
-        <h3><span class="lang-en">Astropy</span><span class="lang-pt">Astropy</span></h3>
-        <p><span class="lang-en">Core Python library for astronomy with I/O, units, and coordinates</span><span class="lang-pt">Biblioteca Python central para astronomia com I/O, unidades e coordenadas</span></p>
-      </div>
-    </a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/resources/ds9/" class="resource-link">
-      <div class="resource-icon">🔭</div>
-      <div class="resource-content">
-        <h3><span class="lang-en">DS9 - FITS Viewer</span><span class="lang-pt">DS9 - Visualizador FITS</span></h3>
-        <p><span class="lang-en">Powerful FITS image visualization tool</span><span class="lang-pt">Ferramenta poderosa de visualização de imagens FITS</span></p>
-      </div>
-    </a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/resources/topcat/" class="resource-link">
-      <div class="resource-icon">📊</div>
-      <div class="resource-content">
-        <h3><span class="lang-en">TOPCAT</span><span class="lang-pt">TOPCAT</span></h3>
-        <p><span class="lang-en">Interactive catalog viewer and cross-matcher</span><span class="lang-pt">Visualizador de catálogos interativo e cross-matcher</span></p>
-      </div>
-    </a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/resources/aladin/" class="resource-link">
-      <div class="resource-icon">🌐</div>
-      <div class="resource-content">
-        <h3><span class="lang-en">Aladin Lite</span><span class="lang-pt">Aladin Lite</span></h3>
-        <p><span class="lang-en">Browser-based interactive sky visualization</span><span class="lang-pt">Visualização interativa do céu baseada no navegador</span></p>
-      </div>
-    </a>
-  </li>
-  <li>
-    <a href="{{ site.baseurl }}/resources/jupyter/" class="resource-link">
-      <div class="resource-icon">💻</div>
-      <div class="resource-content">
-        <h3><span class="lang-en">Jupyter Notebooks</span><span class="lang-pt">Jupyter Notebooks</span></h3>
-        <p><span class="lang-en">Interactive computing and reproducible research</span><span class="lang-pt">Computação interativa e pesquisa reprodutível</span></p>
+        <h3><span class="lang-en">Numerical Calculus</span><span class="lang-pt">Cálculo Numérico</span></h3>
+        <p><span class="lang-en">Repository</span><span class="lang-pt">Repositório</span></p>
       </div>
     </a>
   </li>
