@@ -86,7 +86,7 @@ author_profile: true
 
 <ul class="resources-list">
   <li>
-    <a href="{{ site.baseurl }}/resources/astropy/" class="resource-link">
+    <a href="{{ site.baseurl }}/resources/formularios/" class="resource-link">
       <div class="resource-icon">📚</div>
       <div class="resource-content">
         <h3><span class="lang-en">Numerical Calculus</span><span class="lang-pt">Cálculo Numérico</span></h3>

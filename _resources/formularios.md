@@ -3,8 +3,8 @@ layout: single
 title:
   en: "Astronomy Data Toolkit"
   pt: "Kit de Ferramentas para Dados em Astronomia"
-date: 2024-08-01
-permalink: /resources/astronomy-toolkit/
+date: 2025-12-22
+permalink: /resources/formularios/
 summary:
   en: "Curated tools for astronomy workflows: visualization, FITS inspection, catalogs, and reproducible notebooks."
   pt: "Ferramentas selecionadas para fluxos de astronomia: visualização, inspeção de FITS, catálogos e notebooks reprodutíveis."
