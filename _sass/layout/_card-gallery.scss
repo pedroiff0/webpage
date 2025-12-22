@@ -19,6 +19,14 @@
   border: 1px solid var(--global-border-color, #e0e0e0);
 }
 
+a.card,
+a.card:visited,
+a.card:hover,
+a.card:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);

@@ -9,7 +9,7 @@ summary:
   en: "Curated tools for astronomy workflows: visualization, FITS inspection, catalogs, and reproducible notebooks."
   pt: "Ferramentas selecionadas para fluxos de astronomia: visualização, inspeção de FITS, catálogos e notebooks reprodutíveis."
 header:
-  teaser: /images/profilepic.jpeg
+  teaser: /images/CalcNumerical.jpeg
 tags:
   - resources
   - tools
