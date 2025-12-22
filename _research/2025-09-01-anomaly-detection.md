@@ -3,7 +3,7 @@ layout: single
 title:
   en: "Anomaly Detection in Gaia Data"
   pt: "Detecção de Anomalias em Dados do Gaia"
-date: 2024-09-01
+date: 2025-09-01
 permalink: /research/anomaly-detection/
 summary:
   en: "Building a machine learning pipeline to spot rare stellar objects across Gaia and complementary surveys."
