@@ -5,13 +5,13 @@ title:
   en: "MOSTRATEC 2023"
   pt: "MOSTRATEC 2023"
 date: 2023-10-23
-permalink: /blog/mostratec2023/
+permalink: /media/mostratec2023/
 excerpt: ""
 summary:
-  en: "How computer engineering can support modern astronomy—from data pipelines to simulations and machine learning."
-  pt: "Como a engenharia de computação pode contribuir significativamente para a astronomia moderna, de pipelines de dados a simulações e aprendizado de máquina."
+  en: ""
+  pt: ""
 header:
-  teaser: /images/mctia2025/mctia2025.jpeg
+  teaser: /images/mostratec2023/mostratec.jpeg
 tags:
   - engineering
   - computing

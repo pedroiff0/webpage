@@ -5,13 +5,13 @@ title:
   en: "FEBRACE 2023"
   pt: "FEBRACE 2023"
 date: 2023-03-20
-permalink: /blog/febrace2023/
+permalink: /media/febrace2023/
 excerpt: ""
 summary:
-  en: "How computer engineering can support modern astronomy—from data pipelines to simulations and machine learning."
-  pt: "Como a engenharia de computação pode contribuir significativamente para a astronomia moderna, de pipelines de dados a simulações e aprendizado de máquina."
+  en: ""
+  pt: ""
 header:
-  teaser: /images/mctia2025/mctia2025.jpeg
+  teaser: /images/febrace2023/febrace.jpeg
 tags:
   - engineering
   - computing

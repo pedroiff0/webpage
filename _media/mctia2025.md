@@ -5,11 +5,11 @@ title:
   en: "MCTIA 2025"
   pt: "MCTIA 2025"
 date: 2025-12-01
-permalink: /blog/mctia2025/
+permalink: /media/mctia2025/
 excerpt: ""
 summary:
-  en: "How computer engineering can support modern astronomy—from data pipelines to simulations and machine learning."
-  pt: "Como a engenharia de computação pode contribuir significativamente para a astronomia moderna, de pipelines de dados a simulações e aprendizado de máquina."
+  en: ""
+  pt: ""
 header:
   teaser: /images/mctia2025/mctia2025.jpeg
 tags:
