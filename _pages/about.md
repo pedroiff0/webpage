@@ -3,48 +3,113 @@ layout: archive
 permalink: /
 title:
   en: "About Me"
-  pt: "Sobre mim"
+  pt: "Sobre Mim"
 author_profile: true
 redirect_from: 
   - /about
   - /about.html
 ---
-{% include toc %}
 
 {% include base_path %}
-<!-- Use language-specific blocks. `markdown="1"` lets kramdown/Markdown inside the div render normally. -->
+
 <div class="lang-en" markdown="1">
 
-Hello! My name is Pedro Henrique and I am an undergraduate student in Computer Engineering at the Fluminense Federal Institute, in Rio de Janeiro, Brazil. I have been working with astronomy since 2022 and am currently involved in my third research project, focusing on stars and the structure of our Galaxy. I am passionate about open-source initiatives and scientific communication, and I seek to combine computational methods with astrophysical problems to help make science more accessible and collaborative.
+## Welcome! 👋
 
-# What you can find out here
+I'm Pedro Henrique, an undergraduate Computer Engineering student at the [Federal Fluminense Institute](https://portal1.iff.edu.br/) in Rio de Janeiro, Brazil. Since 2022, I've been bridging the worlds of computer science and astronomy, working on research projects that explore stellar populations and the structure of our Milky Way galaxy.
 
-Here on this page you will find out some links and contents that i had produced. On the left side of your screen, there is some links such as my socials, and academic things. On the right side of each page, you can see the contents listed so you can easily go where you want. For the pages, each of them were built carefully to represent myself in the page. In Research you can find everywork explained (short version) that i have worked on. In Resources you can find classes materials, LaTeX layouts, some systems open source, and things that i recommend at all, I like to call it my own public archive of mind, or more easyly PAM. For the media page, there is a carrousel for each event i went to since i'm on high school or college. You can see conferences, talks, academic weeks or science fairs. In the Blog section, you may find some (random) posts. I can post good things, or bad things (not bad at all). In the end, the Publications brings a short way to see all the papers, proceedings et al I produced, organized by year. Also, there is a link to a public library at NASA ADS that has the same content. 
+My passion lies at the intersection of **computational methods** and **astrophysical problems**. I believe that open-source tools and reproducible workflows are essential for advancing science and making it more accessible to everyone.
 
-# Research & Interests
+## 🔬 Research Interests
 
-- Milk Way: rebuilding our origins
-- SPHINX
-- Reproducible computational workflows and tooling
-- Empirical software engineering
-- Data-driven experiments and visualization
+**Astrophysics:**
+- Galactic archaeology and stellar populations
+- Milky Way structure and chemical evolution
+- Large-scale astronomical data analysis
 
-# Life Journey
+**Computer Science:**
+- Scientific computing and data pipelines
+- Machine learning applications in astronomy
+- Reproducible computational workflows
+- Open-source software development
 
-# Academic Journey
+## 🌟 What You'll Find Here
 
-# Tips & Tricks
+**[Research](/research/)** – Detailed overviews of my research projects, including current work on stellar population analysis and Galactic structure studies.
+
+**[Publications](/publications/)** – Academic papers, proceedings, and preprints, organized by category. You can also find my work on [Google Scholar]({{ site.author.googlescholar }}), [arXiv]({{ site.author.arxiv }}), and [NASA ADS](https://ui.adsabs.harvard.edu/user/libraries/lIX355U5T0-y1Y-ic8QO5Q).
+
+**[Resources](/resources/)** – My personal public archive of knowledge (PAM): course materials, LaTeX templates, open-source tools, and curated recommendations for students and researchers.
+
+**[Media](/media/)** – A visual journey through conferences, science fairs, talks, and academic events I've participated in since high school.
+
+**[Blog](/blog/)** – Random thoughts, tutorials, reflections on science, technology, and the research journey.
+
+## 🎓 Academic Journey
+
+Currently pursuing my degree at IFFluminense, I've been fortunate to work on multiple research initiatives that combine computational techniques with astronomical observations. My work has been presented at national and international scientific events, and I continue to seek opportunities to collaborate and learn.
+
+## 💡 Philosophy
+
+I believe science should be:
+- **Open** – Accessible to everyone, regardless of background
+- **Reproducible** – Built on solid, verifiable foundations
+- **Collaborative** – Strengthened by diverse perspectives
+- **Communicative** – Shared clearly with both experts and the public
+
+## 📫 Let's Connect
+
+Feel free to reach out through any of the social links on the left sidebar. I'm always open to discussing research collaborations, open-source projects, or just chatting about astronomy and computing!
 
 </div>
 
 <div class="lang-pt" markdown="1">
 
-Olá! Meu nome é Pedro Henrique e sou aluno de graduação em Engenharia de Computação no Instituto Federal Fluminense, no Rio de Janeiro, Brasil. Trabalho com astronomia desde 2022 e atualmente estou envolvido no meu terceiro projeto de pesquisa, com foco em estrelas e na estrutura da nossa Galáxia. Sou apaixonado por iniciativas de código aberto e comunicação científica, e busco combinar métodos computacionais com problemas astrofísicos para tornar a ciência mais acessível e colaborativa.
+## Bem-vindo! 👋
 
-# Pesquisa & Interesses
+Sou Pedro Henrique, estudante de Engenharia de Computação no [Instituto Federal Fluminense](https://portal1.iff.edu.br/), no Rio de Janeiro, Brasil. Desde 2022, venho construindo uma ponte entre ciência da computação e astronomia, trabalhando em projetos de pesquisa que exploram populações estelares e a estrutura da nossa galáxia, a Via Láctea.
 
-- Fluxos de trabalho e ferramentas computacionais reprodutíveis
-- Engenharia de software empírica
-- Experimentos orientados por dados e visualização
+Minha paixão está na interseção entre **métodos computacionais** e **problemas astrofísicos**. Acredito que ferramentas de código aberto e fluxos de trabalho reprodutíveis são essenciais para avançar a ciência e torná-la mais acessível a todos.
+
+## 🔬 Interesses de Pesquisa
+
+**Astrofísica:**
+- Arqueologia galáctica e populações estelares
+- Estrutura e evolução química da Via Láctea
+- Análise de grandes volumes de dados astronômicos
+
+**Ciência da Computação:**
+- Computação científica e pipelines de dados
+- Aplicações de aprendizado de máquina em astronomia
+- Fluxos de trabalho computacionais reprodutíveis
+- Desenvolvimento de software de código aberto
+
+## 🌟 O Que Você Vai Encontrar Aqui
+
+**[Pesquisa](/research/)** – Visões detalhadas dos meus projetos de pesquisa, incluindo o trabalho atual sobre análise de populações estelares e estudos da estrutura Galáctica.
+
+**[Publicações](/publications/)** – Artigos acadêmicos, anais e preprints, organizados por categoria. Você também pode encontrar meu trabalho no [Google Scholar]({{ site.author.googlescholar }}), [arXiv]({{ site.author.arxiv }}) e [NASA ADS](https://ui.adsabs.harvard.edu/user/libraries/lIX355U5T0-y1Y-ic8QO5Q).
+
+**[Recursos](/resources/)** – Meu arquivo público pessoal de conhecimento (PAM): materiais de cursos, templates LaTeX, ferramentas open-source e recomendações curadas para estudantes e pesquisadores.
+
+**[Mídia](/media/)** – Uma jornada visual por conferências, feiras de ciências, palestras e eventos acadêmicos que participei desde o ensino médio.
+
+**[Blog](/blog/)** – Pensamentos aleatórios, tutoriais, reflexões sobre ciência, tecnologia e a jornada de pesquisa.
+
+## 🎓 Jornada Acadêmica
+
+Atualmente cursando graduação no IFFluminense, tive a sorte de trabalhar em múltiplas iniciativas de pesquisa que combinam técnicas computacionais com observações astronômicas. Meu trabalho foi apresentado em eventos científicos nacionais e internacionais, e continuo buscando oportunidades para colaborar e aprender.
+
+## 💡 Filosofia
+
+Acredito que a ciência deve ser:
+- **Aberta** – Acessível a todos, independentemente da origem
+- **Reprodutível** – Construída sobre bases sólidas e verificáveis
+- **Colaborativa** – Fortalecida por perspectivas diversas
+- **Comunicativa** – Compartilhada claramente com especialistas e público geral
+
+## 📫 Vamos Conversar
+
+Fique à vontade para entrar em contato através de qualquer um dos links sociais na barra lateral esquerda. Estou sempre aberto para discutir colaborações de pesquisa, projetos open-source, ou apenas conversar sobre astronomia e computação!
 
 </div>

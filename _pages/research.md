@@ -9,18 +9,6 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="lang-en" markdown="1">
-
-## Research Highlights
-
-</div>
-
-<div class="lang-pt" markdown="1">
-
-## Pesquisas em Destaque
-
-</div>
-
 <style>
 .research-list {
   list-style: none;
