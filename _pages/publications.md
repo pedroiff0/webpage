@@ -8,11 +8,22 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">
+  <div class="wordwrap" style="margin-bottom: 0.2rem; white-space: normal;">
     <span class="lang-en">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</span>
     <span class="lang-pt">Você também pode encontrar meus artigos em <a href="{{site.author.googlescholar}}">meu perfil Google Scholar</a>.</span>
   </div>
 {% endif %}
+
+{% if site.author.arxiv %}
+  <div class="wordwrap" style="margin-bottom: 0.2rem; white-space: normal;">
+    <span class="lang-en">Or browse my papers on <a href="{{ site.author.arxiv }}">arXiv</a>.</span>
+    <span class="lang-pt">Ou veja meus artigos no <a href="{{ site.author.arxiv }}">arXiv</a>.</span>
+  </div>
+{% endif %}
+<div class="wordwrap" style="margin-bottom: 0.2rem; white-space: normal;">
+  <span class="lang-en">Browse my NASA ADS library <a href="https://ui.adsabs.harvard.edu/user/libraries/lIX355U5T0-y1Y-ic8QO5Q">here</a>.</span>
+  <span class="lang-pt">Veja minha biblioteca na NASA ADS <a href="https://ui.adsabs.harvard.edu/user/libraries/lIX355U5T0-y1Y-ic8QO5Q">aqui</a>.</span>
+</div>
 
 {% include base_path %}
 
