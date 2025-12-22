@@ -11,7 +11,7 @@ summary:
   en: ""
   pt: ""
 header:
-  teaser: /images/CalcNumerical.jpeg
+  teaser: /images/CalcNumerical.png
 tags:
   - engineering
   - computing
