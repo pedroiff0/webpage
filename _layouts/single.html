@@ -41,7 +41,10 @@ layout: default
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
         {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+          {% assign modified_en = page.modified | date: "%B %-d, %Y" %}
+          {% assign modified_pt = page.modified | date: "%-d %B %Y" %}
+          {% assign modified_pt = modified_pt | replace: 'January', 'janeiro' | replace: 'February', 'fevereiro' | replace: 'March', 'março' | replace: 'April', 'abril' | replace: 'May', 'maio' | replace: 'June', 'junho' | replace: 'July', 'julho' | replace: 'August', 'agosto' | replace: 'September', 'setembro' | replace: 'October', 'outubro' | replace: 'November', 'novembro' | replace: 'December', 'dezembro' %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <span class="lang-en">Published:</span><span class="lang-pt">Publicado em:</span></strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}"><span class="lang-en">{{ modified_en }}</span><span class="lang-pt">{{ modified_pt }}</span></time></p>
         {% endif %}
         
         {% if page.collection == 'teaching' %}
@@ -49,7 +52,10 @@ layout: default
         {% elsif page.venue and page.date %}
           <p><span class="lang-en">Published in</span><span class="lang-pt">Publicado em</span> <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+          {% assign published_en = page.date | default: "1900-01-01" | date: "%B %-d, %Y" %}
+          {% assign published_pt = page.date | default: "1900-01-01" | date: "%-d %B %Y" %}
+          {% assign published_pt = published_pt | replace: 'January', 'janeiro' | replace: 'February', 'fevereiro' | replace: 'March', 'março' | replace: 'April', 'abril' | replace: 'May', 'maio' | replace: 'June', 'junho' | replace: 'July', 'julho' | replace: 'August', 'agosto' | replace: 'September', 'setembro' | replace: 'October', 'outubro' | replace: 'November', 'novembro' | replace: 'December', 'dezembro' %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <span class="lang-en">Published:</span><span class="lang-pt">Publicado em:</span></strong> <time datetime="{{ page.date | date_to_xmlschema }}"><span class="lang-en">{{ published_en }}</span><span class="lang-pt">{{ published_pt }}</span></time></p>
         {% endif %}    
         </header>
       {% endunless %}
