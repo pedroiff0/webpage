@@ -32,8 +32,3 @@ main:
       en: "Blog"
       pt: "Blog"
     url: /blog/
-
-  # - title:
-  #     en: "CV"
-  #     pt: "CV"
-  #   url: /cv/
