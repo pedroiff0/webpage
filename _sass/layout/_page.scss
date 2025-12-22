@@ -84,6 +84,21 @@
     }
   }
 
+  /* Do not underline card gallery items rendered inside page content */
+  .card-grid .card,
+  .card-grid .card a,
+  .card-grid .card a:hover,
+  .card-grid .card a:visited,
+  .card-grid .card a:focus,
+  .card-grid .card a:active,
+  .card-grid .card h3,
+  .card-grid .card p,
+  .card-grid .card h3 *,
+  .card-grid .card p * {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
   dt {
     margin-top: 1em;
     font-family: $sans-serif;
@@ -189,6 +204,158 @@
     color: #fff;
     text-decoration: none;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Engagement (likes, share, local comments)
+   -------------------------------------------------------------------------- */
+
+.engagement {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--global-border-color, #e0e0e0);
+  border-radius: 10px;
+  background: var(--global-bg-color, #fafafa);
+}
+
+.like-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-border-color, #ddd);
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, #333);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.like-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.like-button.liked {
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.like-count {
+  font-weight: 700;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--global-border-color, #ddd);
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, #333);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.comments {
+  margin-top: 1.25rem;
+}
+
+.comments__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.comments__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem;
+}
+
+.comments__form input,
+.comments__form textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--global-border-color, #ddd);
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, #333);
+}
+
+.comments__form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.comments__note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light, #666);
+}
+
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comment {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--global-border-color, #e0e0e0);
+  border-radius: 8px;
+  background: var(--global-bg-color, #fff);
+}
+
+.comment__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.comment__time {
+  color: var(--global-text-color-light, #666);
+  font-size: 0.85rem;
+}
+
+.comments__empty {
+  margin: 0;
+  color: var(--global-text-color-light, #666);
 }
 
 /*

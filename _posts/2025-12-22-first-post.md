@@ -13,10 +13,10 @@ summary:
 header:
   teaser: /images/profilepic.jpeg
 tags:
-  - engenharia
-  - computação
-  - astronomia
-  - tecnologia
+  - engineering
+  - computing
+  - astronomy
+  - technology
 ---
 
 <div class="lang-en" markdown="1">

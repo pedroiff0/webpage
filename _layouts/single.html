@@ -63,6 +63,40 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
+        <div class="engagement" data-engagement>
+          <div class="like-share">
+            <button class="like-button" type="button" data-like-button data-page-id="{{ page.url | default: page.permalink | slugify }}">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+              <span class="lang-en">Like</span><span class="lang-pt">Curtir</span>
+              <span class="like-count" data-like-count>0</span>
+            </button>
+
+            <div class="share-buttons" data-share>
+              <span class="share-label"><span class="lang-en">Share:</span><span class="lang-pt">Compartilhar:</span></span>
+              {% assign full_url = site.url | append: page.url %}
+              {% assign share_title = page.title.en | default: page.title | uri_escape %}
+              <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?url={{ full_url | uri_escape }}&text={{ share_title }}" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"></i> X</a>
+              <a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ full_url | uri_escape }}" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+              <a class="share-btn share-whatsapp" href="https://api.whatsapp.com/send?text={{ share_title }}%20{{ full_url | uri_escape }}" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+              <button type="button" class="share-btn share-native" data-share-native><i class="fas fa-share-alt" aria-hidden="true"></i> <span class="lang-en">Share</span><span class="lang-pt">Compartilhar</span></button>
+            </div>
+          </div>
+
+          <div class="comments" data-comments>
+            <h3 class="comments__title"><span class="lang-en">Comments</span><span class="lang-pt">Comentários</span></h3>
+            <form class="comments__form" data-comment-form>
+              <div class="comments__fields">
+                <input type="text" name="name" placeholder="Name / Nome (opcional)" />
+                <input type="email" name="email" placeholder="Email (opcional)" />
+              </div>
+              <textarea name="message" placeholder="Mensagem / Message" required></textarea>
+              <button type="submit" class="btn"> <span class="lang-en">Publish</span><span class="lang-pt">Publicar</span> </button>
+              <p class="comments__note"><span class="lang-en">Comments stay on this device only.</span><span class="lang-pt">Comentários ficam apenas neste dispositivo.</span></p>
+            </form>
+            <div class="comments__list" data-comment-list></div>
+          </div>
+        </div>
+
         {% if page.citation %}
           <p style="font-size: smaller">
             <span class="lang-en">Recommended citation:</span><span class="lang-pt">Citação recomendada:</span>
@@ -110,6 +144,105 @@ layout: default
 
       {% include post_pagination.html %}
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const pageId = '{{ page.url | default: page.permalink | slugify }}';
+        const fullUrl = '{{ site.url | append: page.url }}';
+
+        // Likes (local only)
+        const likeBtn = document.querySelector('[data-like-button]');
+        const likeCountEl = document.querySelector('[data-like-count]');
+        if (likeBtn && likeCountEl) {
+          const likeKey = `like:${pageId}`;
+          const likedKey = `${likeKey}:liked`;
+          let count = parseInt(localStorage.getItem(likeKey) || '0', 10);
+          let liked = localStorage.getItem(likedKey) === '1';
+
+          const renderLike = () => {
+            likeCountEl.textContent = count;
+            likeBtn.classList.toggle('liked', liked);
+          };
+
+          likeBtn.addEventListener('click', () => {
+            if (!liked) {
+              liked = true;
+              count += 1;
+            } else {
+              liked = false;
+              count = Math.max(0, count - 1);
+            }
+            localStorage.setItem(likeKey, count.toString());
+            localStorage.setItem(likedKey, liked ? '1' : '0');
+            renderLike();
+          });
+
+          renderLike();
+        }
+
+        // Social sharing (native API fallback to links)
+        const nativeShareBtn = document.querySelector('[data-share-native]');
+        if (nativeShareBtn) {
+          if (navigator.share) {
+            nativeShareBtn.addEventListener('click', async () => {
+              try {
+                await navigator.share({ title: document.title, url: fullUrl });
+              } catch (err) {
+                // ignore cancel
+              }
+            });
+          } else {
+            nativeShareBtn.style.display = 'none';
+          }
+        }
+
+        // Anonymous comments (localStorage per page)
+        const commentForm = document.querySelector('[data-comment-form]');
+        const commentList = document.querySelector('[data-comment-list]');
+        const commentsKey = `comments:${pageId}`;
+
+        const loadComments = () => {
+          try { return JSON.parse(localStorage.getItem(commentsKey) || '[]'); }
+          catch(e) { return []; }
+        };
+        let comments = loadComments();
+
+        const renderComments = () => {
+          if (!commentList) return;
+          if (!comments.length) {
+            commentList.innerHTML = '<p class="comments__empty"><span class="lang-en">Be the first to comment.</span><span class="lang-pt">Seja o primeiro a comentar.</span></p>';
+            return;
+          }
+          commentList.innerHTML = comments.map(c => {
+            const name = c.name || '<span class="lang-en">Anonymous</span><span class="lang-pt">Anônimo</span>';
+            const time = c.timestamp ? new Date(c.timestamp).toLocaleString() : '';
+            return `<div class="comment"><div class="comment__head"><strong>${name}</strong><span class="comment__time">${time}</span></div><p>${c.message}</p></div>`;
+          }).join('');
+        };
+
+        if (commentForm) {
+          commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(commentForm);
+            const message = (formData.get('message') || '').toString().trim();
+            if (!message) return;
+            const name = (formData.get('name') || '').toString().trim();
+            const email = (formData.get('email') || '').toString().trim();
+            comments.unshift({
+              name: name || '',
+              email: email || '',
+              message,
+              timestamp: new Date().toISOString(),
+            });
+            localStorage.setItem(commentsKey, JSON.stringify(comments.slice(0, 100)));
+            commentForm.reset();
+            renderComments();
+          });
+        }
+
+        renderComments();
+      });
+    </script>
 
     {% if site.comments.provider and page.comments %}
       {% include comments.html %}
