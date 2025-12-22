@@ -9,22 +9,6 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="lang-en" markdown="1">
-
-## Recent Posts
-
-Browse through my latest blog posts and updates.
-
-</div>
-
-<div class="lang-pt" markdown="1">
-
-## Posts Recentes
-
-Navegue pelos meus posts e atualizações mais recentes.
-
-</div>
-
 {% include card-gallery.html
   collection=site.posts
   show_date=true
