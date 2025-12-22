@@ -54,7 +54,11 @@ Params:
             {% endif %}
           {% if include.show_date != false and item.date %}
             <div class="card-meta">
-              {{ item.date | date: "%B %d, %Y" }}
+              {% assign date_en = item.date | date: "%B %-d, %Y" %}
+              {% assign date_pt = item.date | date: "%-d %B %Y" %}
+              {% assign date_pt = date_pt | replace: 'January', 'janeiro' | replace: 'February', 'fevereiro' | replace: 'March', 'março' | replace: 'April', 'abril' | replace: 'May', 'maio' | replace: 'June', 'junho' | replace: 'July', 'julho' | replace: 'August', 'agosto' | replace: 'September', 'setembro' | replace: 'October', 'outubro' | replace: 'November', 'novembro' | replace: 'December', 'dezembro' %}
+              <span class="lang-en">{{ date_en }}</span>
+              <span class="lang-pt">{{ date_pt }}</span>
             </div>
           {% endif %}
             {% if include.show_excerpt != false and desc %}
@@ -64,11 +68,15 @@ Params:
               </p>
             {% endif %}
           {% if include.show_tags != false and item.tags %}
-            <div class="card-tags">
-              {% for tag in item.tags limit:3 %}
-                <span class="card-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
+          <div class="card-tags">
+            {% for tag in item.tags limit:3 %}
+            {% assign tag_key = tag | slugify %}
+            <span class="card-tag">
+              <span class="lang-en">{{ site.data.tags[tag_key].en | default: tag }}</span>
+              <span class="lang-pt">{{ site.data.tags[tag_key].pt | default: tag }}</span>
+            </span>
+            {% endfor %}
+          </div>
           {% endif %}
         </div>
       </a>
