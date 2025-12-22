@@ -29,6 +29,38 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
+        {% assign banner_image = page.header.banner | default: page.header.cover %}
+        {% if banner_image %}
+          <div class="page__teaser-banner">
+            {% if banner_image.en or banner_image.pt %}
+              {% assign banner_en = banner_image.en | default: banner_image.pt %}
+              {% assign banner_pt = banner_image.pt | default: banner_image.en %}
+              {% if banner_en %}
+                {% if banner_en contains "://" %}
+                  {% assign banner_en_src = banner_en %}
+                {% else %}
+                  {% assign banner_en_src = banner_en | prepend: base_path %}
+                {% endif %}
+                <img src="{{ banner_en_src }}" alt="" class="lang-en">
+              {% endif %}
+              {% if banner_pt %}
+                {% if banner_pt contains "://" %}
+                  {% assign banner_pt_src = banner_pt %}
+                {% else %}
+                  {% assign banner_pt_src = banner_pt | prepend: base_path %}
+                {% endif %}
+                <img src="{{ banner_pt_src }}" alt="" class="lang-pt">
+              {% endif %}
+            {% else %}
+              {% if banner_image contains "://" %}
+                {% assign banner_src = banner_image %}
+              {% else %}
+                {% assign banner_src = banner_image | prepend: base_path %}
+              {% endif %}
+              <img src="{{ banner_src }}" alt="">
+            {% endif %}
+          </div>
+        {% endif %}
         <header>
           {% if page.title %}
             {% if page.title.en %}

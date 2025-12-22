@@ -11,6 +11,9 @@ summary:
   en: ""
   pt: ""
 header:
+  banner:
+    en: /images/febic2024/febic.jpeg
+    pt: /images/febic2024/febic.jpeg
   teaser: /images/febrace2023/febrace.jpeg
 tags:
   - engineering
