@@ -21,7 +21,6 @@ tags:
 
 <div class="lang-en" markdown="1">
 
-
 </div>
 
 <div class="lang-pt" markdown="1">
